@@ -5,102 +5,136 @@ import time
 import multiprocessing
 import logging
 import psutil
-import tkinter as tk
-from tkinter import scrolledtext
 import signal
+import subprocess
 
-# Initialize logging
-logging.basicConfig(filename='process_manager.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(filename='Advanced_Process_Manager.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
-# Track the previous choice
 previous_choice = None
-
-# Initialize the result variable as a global
 result = ""
-
-# Create a dictionary to keep track of running processes
 running_processes = {}
+pipe_conn, child_conn = multiprocessing.Pipe()
 
+# Flag to indicate if a thread should terminate
+terminate_flags = {}
 
-# Function to create a new process
-def create_process(process_name, command):
+# List to track created processes and threads
+created_processes_threads = []
+
+choices = {
+    "1": "Create Process",
+    "2": "List Processes",
+    "3": "Create Thread",
+    "4": "Terminate Thread",
+    "5": "Enter IPC Message",
+    "6": "Receive IPC Message",
+    "7": "Process Synchronization",
+    "8": "Clear Log",
+    "9": "Exit"
+}
+
+# Producer function
+def producer(q):
+    for item in range(5):
+        q.put(item)
+        print(f"Producing item {item}")
+        logging.info(f"Producing item {item}")
+
+# Consumer function
+def consumer(q):
+    for item in iter(q.get, None):
+        print(f"Consuming item {item}")
+        logging.info(f"Consuming item {item}")
+
+# Function to create a process and add it to the tracking list
+def create_process(process_name):
     pid = os.fork()
     if pid == 0:
         try:
-            # Execute the specified command in the child process
-            os.execlp(command, command)
+            pass
         except Exception as e:
-            logging.error(f"Child process '{process_name}' with PID {os.getpid()} failed to execute: {str(e)}")
-            log_text.insert(tk.END,
-                            f"Child process '{process_name}' with PID {os.getpid()} failed to execute: {str(e)}\n")
-        os._exit(1)
+            logging.error(f"Child process '{process_name}' with PID {os.getpid()} encountered an error: {str(e)}")
+        os._exit(0)
     else:
         running_processes[pid] = process_name
+        created_processes_threads.append((pid, process_name)) 
+        print(f"Child process '{process_name}' with PID {pid} created.")
         logging.info(f"Child process '{process_name}' with PID {pid} created.")
-        log_text.insert(tk.END, f"Child process '{process_name}' with PID {pid} created.\n")
 
-
-# Function to terminate a process
-def terminate_process(process_pid):
-    try:
-        os.kill(process_pid, signal.SIGTERM)
-        del running_processes[process_pid]
-        logging.info(f"Terminated process with PID {process_pid}.")
-        log_text.insert(tk.END, f"Terminated process with PID {process_pid}.\n")
-    except ProcessLookupError:
-        logging.error(f"Process with PID {process_pid} not found.")
-        log_text.insert(tk.END, f"Process with PID {process_pid} not found.\n")
-
-
-# Function to list running processes
-def list_processes():
-    process_list = "List of running processes:\n"
-    logging.info("List of running processes:")
-    for proc in psutil.process_iter(attrs=['pid', 'name', 'status']):
-        process_info = proc.info
-        process_list += f"Process with PID: {process_info['pid']}, Name: {process_info['name']}, Status: {process_info['status']}\n"
-        logging.info(
-            f"Process with PID: {process_info['pid']}, Name: {process_info['name']}, Status: {process_info['status']}")
-    log_text.insert(tk.END, process_list)
-
-
-# Function to create a new thread
+# Function to create a thread and add it to the tracking list
 def create_thread(thread_name):
+    terminate_flags[thread_name] = False  # Initialize the terminate flag
     thread = threading.Thread(target=thread_function, args=(thread_name,))
+    logging.info(f"Thread '{thread_name}' started.") 
     thread.start()
-    log_text.insert(tk.END, f"Thread '{thread_name}' started.\n")
+    created_processes_threads.append((thread, thread_name))  
+    print(f"Thread '{thread_name}' started.") 
 
-
-# Function for the thread's activity
 def thread_function(thread_name):
-    log_text.insert(tk.END, f"Thread '{thread_name}' running.\n")
-    time.sleep(2)
-    log_text.insert(tk.END, f"Thread '{thread_name}' finished.\n")
+    logging.info(f"Thread '{thread_name}' running.") 
+    print(f"Thread '{thread_name}' running.")
+    time.sleep(1)  # Simulate some work
+
+    if terminate_flags[thread_name] == True:
+        print(f"Thread '{thread_name}' is terminating gracefully.")
+        logging.info(f"Thread '{thread_name}' is terminating gracefully.")
+
+def terminate_thread(thread_name):
+    if thread_name in terminate_flags:
+        terminate_flags[thread_name] = True
+        print(f"Terminating thread '{thread_name}'...")
+        logging.info(f"Terminating thread '{thread_name}'...")
+    else:
+        print(f"Thread '{thread_name}' not found.")
+        logging.info(f"Thread '{thread_name}' not found.")
+
+def list_processes():
+    print("List of running processes:")
+    for proc in psutil.process_iter(attrs=['pid', 'ppid', 'name', 'status']):
+        process_info = proc.info
+        print(f"Process with PID: {process_info['pid']}, PPID: {process_info['ppid']}, Name: {process_info['name']}, Status: {process_info['status']}")
+        logging.info(f"Process with PID: {process_info['pid']}, PPID: {process_info['ppid']}, Name: {process_info['name']}, Status: {process_info['status']}")
+
+    # Display created processes and threads from the tracking list
+    print("Created processes and threads:")
+    for item in created_processes_threads:
+        if isinstance(item[0], int):
+            print(f"Created Process with PID: {item[0]}, Name: {item[1]}")
+        elif isinstance(item[0], threading.Thread):
+            print(f"Created Thread with Name: {item[1]}")
+
+def ipc_send_message(message):
+    child_conn.send(message)
+    print(f"Message sent: {message}")
+    logging.info(f"Message sent: {message}")
 
 
-# Function for inter-process communication (IPC)
-def ipc_message_passing(message):
-    log_text.insert(tk.END, f"IPC: Sending message - '{message}'\n")
+def ipc_receive_message():
+    log_file_path = 'Advanced_Process_Manager.log'
+    received_messages = []
+
+    if not os.path.exists(log_file_path):
+        print("Log file not found")
+        return
+
+    with open(log_file_path, 'r') as log_file:
+        lines = log_file.readlines()
+        for line in lines:
+            if "Message sent: " in line:
+                message = line.split("Message sent: ")[1].strip()
+                received_messages.append(message)
+
+    if received_messages:
+        print("Received Messages:")
+        for message in received_messages:
+            print(message)
+    else:
+        print("No message available")
 
 
-# Function to demonstrate process synchronization
 def process_synchronization():
-    global result
-    result = "Demonstrating process synchronization using multiprocessing:\n"
+    print("Demonstrating process synchronization using multiprocessing:")
     logging.info("Demonstrating process synchronization using multiprocessing:")
-
-    # Producer function for the synchronization demonstration
-    def producer(q):
-        for item in range(5):
-            q.put(item)
-            log_text.insert(tk.END, f"Producing item {item}\n")
-            logging.info(f"Producing item {item}")
-
-    # Consumer function for the synchronization demonstration
-    def consumer(q):
-        for item in iter(q.get, None):
-            log_text.insert(tk.END, f"Consuming item {item}\n")
-            logging.info(f"Consuming item {item}")
 
     q = multiprocessing.Queue()
     producer_process = multiprocessing.Process(target=producer, args=(q,))
@@ -113,124 +147,52 @@ def process_synchronization():
     q.put(None)
     consumer_process.join()
 
-    result += "Process synchronization demonstration complete."
-    log_text.insert(tk.END, result)
+    print("Process synchronization demonstration complete.")
+    logging.info("Process synchronization demonstration complete.")
 
+def clear_log():
+    # Add code to clear the log file here
+    with open('Advanced_Process_Manager.log', 'w') as log_file:
+        log_file.truncate()
+    print("Log file cleared.")
+    logging.info("Log file cleared.")
 
-# Function to handle showing input fields based on the user's choice
-def show_inputs():
-    global previous_choice
-    choice = choice_var.get()
+if __name__ == '__main__':
+    while True:
+        print("Options:")
+        for key, value in choices.items():
+            print(f"{key}) {value}")
 
-    # Hide input fields for the previous choice
-    if previous_choice == '1':
-        process_name_label.grid_remove()
-        process_name_entry.grid_remove()
-        command_label.grid_remove()
-        command_entry.grid_remove()
-    elif previous_choice == '3':
-        thread_name_label.grid_remove()
-        thread_name_entry.grid_remove()
-    elif previous_choice == '4':
-        ipc_message_label.grid_remove()
-        ipc_message_entry.grid_remove()
+        choice = input("Enter choice: ")
 
-    # Show input fields for the current choice
-    if choice == '1':
-        process_name_label.grid()
-        process_name_entry.grid()
-        command_label.grid()
-        command_entry.grid()
-    elif choice == '3':
-        thread_name_label.grid()
-        thread_name_entry.grid()
-    elif choice == '4':
-        ipc_message_label.grid()
-        ipc_message_entry.grid()
+        if choice == "1":
+            process_name = input("Enter process name: ")
+            create_process(process_name)
 
-    previous_choice = choice
+        elif choice == "2":
+            list_processes()
 
+        elif choice == "3":
+            thread_name = input("Enter thread name: ")
+            create_thread(thread_name)
 
-# Function to handle the user's option selection
-def on_option_selected():
-    choice = choice_var.get()
-    logging.info(f"User selected choice: {choice}")
-    show_inputs()
+        elif choice == "4":
+            thread_name = input("Enter the name of the thread to terminate: ")
+            terminate_thread(thread_name)
 
-    if choice == '1':
-        process_name = process_name_entry.get()
-        command = command_entry.get()  # Get the command to run
-        create_process(process_name, command)
-    elif choice == '2':
-        list_processes()
-    elif choice == '3':
-        thread_name = thread_name_entry.get()
-        create_thread(thread_name)
-    elif choice == '4':
-        ipc_message = ipc_message_entry.get()
-        ipc_message_passing(ipc_message)
-    elif choice == '5':
-        process_synchronization()
-    elif choice == '6':
-        root.destroy()
+        elif choice == "5":
+            message = input("Enter IPC message: ")
+            ipc_send_message(message)
 
+        elif choice == "6":
+            ipc_receive_message()
 
-# Create the main application window
-root = tk.Tk()
-root.title("Process Manager")
+        elif choice == "7":
+            process_synchronization()
 
-# Create a frame for organizing the elements
-frame = tk.Frame(root)
-frame.pack(padx=20, pady=20)
+        elif choice == "8":
+            clear_log()
 
-# Create a label for the options
-choice_label = tk.Label(frame, text="Options:")
-choice_label.grid(row=0, column=0, sticky="w")
-
-# Create a variable to hold the choice
-choice_var = tk.StringVar(value='1')
-
-# Define the available choices
-choices = [
-    ("Create Process", '1'),
-    ("List Processes", '2'),
-    ("Create Thread", '3'),
-    ("IPC: Send Message", '4'),
-    ("Process Synchronization", '5'),
-    ("Exit", '6')
-]
-
-row = 1
-for text, val in choices:
-    radio = tk.Radiobutton(frame, text=text, variable=choice_var, value=val, command=show_inputs)
-    radio.grid(row=row, column=0, sticky="w")
-    row += 1
-
-# Create input fields for process creation
-process_name_label = tk.Label(frame, text="Enter process name:")
-process_name_entry = tk.Entry(frame)
-
-command_label = tk.Label(frame, text="Enter command:")
-command_entry = tk.Entry(frame)
-
-# Create input field for thread creation
-thread_name_label = tk.Label(frame, text="Enter thread name:")
-thread_name_entry = tk.Entry(frame)
-
-# Create input field for IPC message
-ipc_message_label = tk.Label(frame, text="Enter IPC message:")
-ipc_message_entry = tk.Entry(frame)
-
-# Create a button to execute the selected action
-process_button = tk.Button(frame, text="Execute", command=on_option_selected)
-process_button.grid(row=row, column=0, columnspan=2)
-
-# Create a text area for displaying log messages
-log_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=50, height=20)
-log_text.pack(padx=20, pady=20)
-
-# Initially show/hide inputs based on the selected option
-show_inputs()
-
-# Start the main application loop
-root.mainloop()
+        elif choice == "9":
+            print("Exited successfully")
+            exit(0)
