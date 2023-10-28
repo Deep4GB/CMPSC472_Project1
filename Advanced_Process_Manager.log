@@ -1,0 +1,578 @@
+2023-10-27 23:38:19,107 - Child process 'my_process' with PID 955 created.
+2023-10-27 23:38:19,108 - Child process 'my_process' with PID 940 running
+2023-10-27 23:38:19,112 - Child process 'my_process' with PID 955 encountered an error: [Errno 2] No such file or directory
+2023-10-27 23:38:26,231 - Thread 't1' created successfully
+2023-10-27 23:38:26,232 - Thread 't1' running
+2023-10-27 23:38:31,446 - Thread 't2' created successfully
+2023-10-27 23:38:31,446 - Thread 't2' running
+2023-10-27 23:38:44,045 - Thread 't1' terminated.
+2023-10-27 23:38:52,651 - Processes created through your code:
+2023-10-27 23:38:52,651 - Process with PID: 955, Name: my_process, Parent PID: 940, State: zombie
+2023-10-27 23:38:59,909 - All processes on the computer:
+2023-10-27 23:38:59,910 - Process with PID: 0, Parent PID: 0, Name: kernel_task, Status: running
+2023-10-27 23:38:59,910 - Process with PID: 1, Parent PID: 0, Name: launchd, Status: running
+2023-10-27 23:38:59,910 - Process with PID: 317, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,911 - Process with PID: 487, Parent PID: 1, Name: financed, Status: running
+2023-10-27 23:38:59,911 - Process with PID: 489, Parent PID: 1, Name: UsageTrackingAgent, Status: running
+2023-10-27 23:38:59,911 - Process with PID: 490, Parent PID: 1, Name: cloudd, Status: running
+2023-10-27 23:38:59,911 - Process with PID: 491, Parent PID: 1, Name: sirittsd, Status: running
+2023-10-27 23:38:59,911 - Process with PID: 495, Parent PID: 1, Name: deleted_helper, Status: running
+2023-10-27 23:38:59,911 - Process with PID: 496, Parent PID: 1, Name: media-indexer, Status: running
+2023-10-27 23:38:59,911 - Process with PID: 497, Parent PID: 1, Name: AMPLibraryAgent, Status: running
+2023-10-27 23:38:59,911 - Process with PID: 498, Parent PID: 1, Name: PodcastContentService, Status: running
+2023-10-27 23:38:59,912 - Process with PID: 499, Parent PID: 1, Name: com.apple.BKAgentService, Status: running
+2023-10-27 23:38:59,912 - Process with PID: 500, Parent PID: 1, Name: AMPArtworkAgent, Status: running
+2023-10-27 23:38:59,912 - Process with PID: 505, Parent PID: 1, Name: com.apple.siri.embeddedspeech, Status: running
+2023-10-27 23:38:59,912 - Process with PID: 506, Parent PID: 1, Name: com.apple.siri.embeddedspeech, Status: running
+2023-10-27 23:38:59,912 - Process with PID: 508, Parent PID: 1, Name: coresymbolicatio, Status: running
+2023-10-27 23:38:59,912 - Process with PID: 509, Parent PID: 1, Name: mlruntimed, Status: running
+2023-10-27 23:38:59,912 - Process with PID: 510, Parent PID: 1, Name: localizationswitcherd, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 511, Parent PID: 1, Name: periodic-wrapper, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 527, Parent PID: 1, Name: logd, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 529, Parent PID: 1, Name: UserEventAgent, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 531, Parent PID: 1, Name: uninstalld, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 532, Parent PID: 1, Name: fseventsd, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 533, Parent PID: 1, Name: mediaremoted, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 536, Parent PID: 1, Name: systemstats, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 538, Parent PID: 1, Name: configd, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 540, Parent PID: 1, Name: powerd, Status: running
+2023-10-27 23:38:59,913 - Process with PID: 545, Parent PID: 1, Name: remoted, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 550, Parent PID: 1, Name: watchdogd, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 554, Parent PID: 1, Name: mds, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 556, Parent PID: 1, Name: kernelmanagerd, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 557, Parent PID: 1, Name: diskarbitrationd, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 561, Parent PID: 1, Name: syslogd, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 564, Parent PID: 1, Name: thermalmonitord, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 565, Parent PID: 1, Name: opendirectoryd, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 566, Parent PID: 1, Name: apsd, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 567, Parent PID: 1, Name: launchservicesd, Status: running
+2023-10-27 23:38:59,914 - Process with PID: 568, Parent PID: 1, Name: timed, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 569, Parent PID: 1, Name: usbmuxd, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 570, Parent PID: 1, Name: securityd, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 575, Parent PID: 1, Name: autofsd, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 576, Parent PID: 1, Name: dasd, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 579, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 583, Parent PID: 1, Name: logind, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 584, Parent PID: 1, Name: revisiond, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 585, Parent PID: 1, Name: KernelEventAgent, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 588, Parent PID: 1, Name: bluetoothd, Status: running
+2023-10-27 23:38:59,915 - Process with PID: 589, Parent PID: 1, Name: notifyd, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 591, Parent PID: 1, Name: corebrightnessd, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 592, Parent PID: 1, Name: AirPlayXPCHelper, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 595, Parent PID: 1, Name: syspolicyd, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 596, Parent PID: 1, Name: WindowServer, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 599, Parent PID: 1, Name: loginwindow, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 600, Parent PID: 1, Name: lsd, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 601, Parent PID: 1, Name: contextstored, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 602, Parent PID: 1, Name: coreservicesd, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 606, Parent PID: 1, Name: cfprefsd, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 607, Parent PID: 1, Name: cfprefsd, Status: running
+2023-10-27 23:38:59,916 - Process with PID: 609, Parent PID: 1, Name: runningboardd, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 610, Parent PID: 1, Name: coreaudiod, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 611, Parent PID: 1, Name: mDNSResponder, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 612, Parent PID: 1, Name: analyticsd, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 613, Parent PID: 1, Name: apfsd, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 614, Parent PID: 1, Name: nsurlsessiond, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 616, Parent PID: 1, Name: airportd, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 637, Parent PID: 1, Name: systemstatusd, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 639, Parent PID: 1, Name: proactived, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 640, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,917 - Process with PID: 641, Parent PID: 1, Name: deleted, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 642, Parent PID: 1, Name: installd, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 643, Parent PID: 1, Name: AssetCache, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 644, Parent PID: 1, Name: geodMachServiceBridge, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 645, Parent PID: 1, Name: system_installd, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 648, Parent PID: 1, Name: AssetCacheTether, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 657, Parent PID: 1, Name: remotemanagement, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 658, Parent PID: 1, Name: RemoteManagementAgent, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 660, Parent PID: 1, Name: symptomsd-diag, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 661, Parent PID: 1, Name: sysdiagnose, Status: running
+2023-10-27 23:38:59,918 - Process with PID: 662, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,919 - Process with PID: 663, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,919 - Process with PID: 664, Parent PID: 1, Name: InteractiveLegacyProfilesSubscriber, Status: running
+2023-10-27 23:38:59,919 - Process with PID: 665, Parent PID: 1, Name: InteractiveLegac, Status: running
+2023-10-27 23:38:59,919 - Process with PID: 670, Parent PID: 1, Name: LegacyProfilesSu, Status: running
+2023-10-27 23:38:59,919 - Process with PID: 671, Parent PID: 1, Name: LegacyProfilesSubscriber, Status: running
+2023-10-27 23:38:59,919 - Process with PID: 672, Parent PID: 1, Name: awdd, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 673, Parent PID: 1, Name: PasscodeSettings, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 674, Parent PID: 1, Name: PasscodeSettingsSubscriber, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 675, Parent PID: 1, Name: AccountSubscribe, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 676, Parent PID: 1, Name: AccountSubscriber, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 677, Parent PID: 1, Name: ManagementTestSu, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 678, Parent PID: 1, Name: ManagementTestSubscriber, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 680, Parent PID: 1, Name: mDNSResponderHel, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 683, Parent PID: 1, Name: symptomsd, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 692, Parent PID: 1, Name: authd, Status: running
+2023-10-27 23:38:59,920 - Process with PID: 698, Parent PID: 1, Name: socketfilterfw, Status: running
+2023-10-27 23:38:59,921 - Process with PID: 703, Parent PID: 1, Name: griddatad, Status: running
+2023-10-27 23:38:59,921 - Process with PID: 705, Parent PID: 1, Name: newsd, Status: running
+2023-10-27 23:38:59,921 - Process with PID: 706, Parent PID: 1, Name: contactsdonationagent, Status: running
+2023-10-27 23:38:59,921 - Process with PID: 707, Parent PID: 1, Name: dprivacyd, Status: running
+2023-10-27 23:38:59,921 - Process with PID: 708, Parent PID: 1, Name: avatarsd, Status: running
+2023-10-27 23:38:59,921 - Process with PID: 712, Parent PID: 1, Name: com.apple.photos.ImageConversionService, Status: running
+2023-10-27 23:38:59,921 - Process with PID: 713, Parent PID: 1, Name: MessagesBlastDoorService, Status: running
+2023-10-27 23:38:59,921 - Process with PID: 718, Parent PID: 1, Name: SafariLaunchAgent, Status: running
+2023-10-27 23:38:59,921 - Process with PID: 732, Parent PID: 1, Name: TouchBarServer, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 741, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 750, Parent PID: 1, Name: photoanalysisd, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 753, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 763, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 774, Parent PID: 1, Name: MobileSMSSpotlightImporterCatalyst, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 779, Parent PID: 1, Name: CloudKeychainProxy, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 784, Parent PID: 1, Name: searchpartyd, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 785, Parent PID: 1, Name: PerfPowerService, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 787, Parent PID: 1, Name: diskmanagementd, Status: running
+2023-10-27 23:38:59,922 - Process with PID: 789, Parent PID: 1, Name: WiFiVelocityAgent, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 790, Parent PID: 1, Name: wifivelocityd, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 791, Parent PID: 1, Name: hidd, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 792, Parent PID: 1, Name: accessoryupdater, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 793, Parent PID: 1, Name: XProtect, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 794, Parent PID: 1, Name: UARPUpdaterServi, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 795, Parent PID: 1, Name: XProtectPluginService, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 796, Parent PID: 1, Name: com.apple.Driver, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 797, Parent PID: 1, Name: com.apple.AppleU, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 798, Parent PID: 1, Name: appleh13camerad, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 799, Parent PID: 1, Name: UVCAssistant, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 800, Parent PID: 1, Name: com.apple.geod, Status: running
+2023-10-27 23:38:59,923 - Process with PID: 801, Parent PID: 1, Name: secinitd, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 802, Parent PID: 1, Name: cfprefsd, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 803, Parent PID: 1, Name: trustd, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 804, Parent PID: 1, Name: containermanager, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 805, Parent PID: 1, Name: com.apple.geod, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 806, Parent PID: 1, Name: com.apple.geod, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 807, Parent PID: 1, Name: wifianalyticsd, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 808, Parent PID: 1, Name: secinitd, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 809, Parent PID: 1, Name: secinitd, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 810, Parent PID: 1, Name: cfprefsd, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 811, Parent PID: 1, Name: cfprefsd, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 812, Parent PID: 1, Name: trustd, Status: running
+2023-10-27 23:38:59,924 - Process with PID: 813, Parent PID: 1, Name: trustd, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 814, Parent PID: 1, Name: containermanager, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 815, Parent PID: 1, Name: containermanager, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 816, Parent PID: 1, Name: colorsync.displa, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 817, Parent PID: 1, Name: com.apple.ColorS, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 818, Parent PID: 1, Name: colorsyncd, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 829, Parent PID: 1, Name: colorsync.useragent, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 830, Parent PID: 1, Name: com.apple.ColorSyncXPCAgent, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 858, Parent PID: 536, Name: systemstats, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 870, Parent PID: 1, Name: locationd, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 876, Parent PID: 1, Name: appleeventsd, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 887, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,925 - Process with PID: 896, Parent PID: 83449, Name: zsh, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 912, Parent PID: 1, Name: mds_stores, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 940, Parent PID: 896, Name: Python, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 941, Parent PID: 940, Name: Python, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 955, Parent PID: 940, Name: Python, Status: zombie
+2023-10-27 23:38:59,926 - Process with PID: 961, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 986, Parent PID: 1, Name: kdc, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 1005, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 1092, Parent PID: 1, Name: mdbulkimport, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 1093, Parent PID: 1, Name: oahd, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 1114, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 1132, Parent PID: 1, Name: IOUserBluetoothS, Status: running
+2023-10-27 23:38:59,926 - Process with PID: 1143, Parent PID: 1, Name: coreauthd, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1145, Parent PID: 1, Name: securityd_servic, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1146, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1180, Parent PID: 1, Name: SubmitDiagInfo, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1226, Parent PID: 1, Name: UserEventAgent, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1231, Parent PID: 1, Name: universalaccessd, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1233, Parent PID: 1, Name: WindowManager, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1234, Parent PID: 1, Name: lsd, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1237, Parent PID: 1, Name: CommCenter, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1239, Parent PID: 1, Name: nsurlsessiond, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1240, Parent PID: 1, Name: usernoted, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1243, Parent PID: 1, Name: pboard, Status: running
+2023-10-27 23:38:59,927 - Process with PID: 1244, Parent PID: 1, Name: rapportd, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1246, Parent PID: 1, Name: ControlStrip, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1254, Parent PID: 1, Name: WiFiAgent, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1256, Parent PID: 1, Name: identityservicesd, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1266, Parent PID: 1, Name: com.apple.audio., Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1270, Parent PID: 1, Name: audioclocksyncd, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1273, Parent PID: 1, Name: WirelessRadioMan, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1290, Parent PID: 1, Name: searchpartyuseragent, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1305, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1308, Parent PID: 1, Name: ContinuityCaptureAgent, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1329, Parent PID: 1, Name: ControlCenter, Status: running
+2023-10-27 23:38:59,928 - Process with PID: 1361, Parent PID: 1, Name: filecoordination, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1364, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1365, Parent PID: 1, Name: NotificationCenter, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1367, Parent PID: 1, Name: corespotlightd, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1370, Parent PID: 1, Name: bird, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1371, Parent PID: 1, Name: sharedfilelistd, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1377, Parent PID: 1, Name: nearbyd, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1380, Parent PID: 1, Name: sharingd, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1390, Parent PID: 1, Name: fontd, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1393, Parent PID: 1, Name: fontworker, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1414, Parent PID: 1, Name: seserviced, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1531, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,929 - Process with PID: 1574, Parent PID: 1, Name: familycircled, Status: running
+2023-10-27 23:38:59,930 - Process with PID: 1585, Parent PID: 1, Name: Dock, Status: running
+2023-10-27 23:38:59,930 - Process with PID: 1586, Parent PID: 1, Name: SystemUIServer, Status: running
+2023-10-27 23:38:59,930 - Process with PID: 1587, Parent PID: 1, Name: Finder, Status: running
+2023-10-27 23:38:59,930 - Process with PID: 1590, Parent PID: 1, Name: Spotlight, Status: running
+2023-10-27 23:38:59,930 - Process with PID: 1592, Parent PID: 1, Name: automountd, Status: running
+2023-10-27 23:38:59,930 - Process with PID: 1593, Parent PID: 1, Name: AMPDeviceDiscoveryAgent, Status: running
+2023-10-27 23:38:59,930 - Process with PID: 1594, Parent PID: 1, Name: ctkahp, Status: running
+2023-10-27 23:38:59,930 - Process with PID: 1598, Parent PID: 1, Name: ctkahp, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1601, Parent PID: 1, Name: commerce, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1608, Parent PID: 1, Name: mdbulkimport, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1613, Parent PID: 1, Name: corespeechd, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1620, Parent PID: 1, Name: imklaunchagent, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1623, Parent PID: 1, Name: icdd, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1627, Parent PID: 1, Name: Adobe Genuine Software Monitor Service, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1628, Parent PID: 1, Name: AirPlayUIAgent, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1629, Parent PID: 1, Name: imagent, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1632, Parent PID: 1, Name: diagnostics_agent, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1634, Parent PID: 1, Name: TextInputMenuAgent, Status: running
+2023-10-27 23:38:59,931 - Process with PID: 1656, Parent PID: 1, Name: useractivityd, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 1657, Parent PID: 1, Name: com.apple.dock.extra, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 1674, Parent PID: 1, Name: mediaremoteagent, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 1677, Parent PID: 1, Name: avconferenced, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 1747, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 1785, Parent PID: 1, Name: EmojiFunctionRowIM_Extension, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 1787, Parent PID: 1, Name: PAH_Extension, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 1841, Parent PID: 1, Name: CVMServer, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 1862, Parent PID: 1, Name: fairplayd, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 1896, Parent PID: 1, Name: storedownloadd, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 2327, Parent PID: 1, Name: com.apple.Safari.History, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 2345, Parent PID: 1, Name: passd, Status: running
+2023-10-27 23:38:59,932 - Process with PID: 2379, Parent PID: 1, Name: com.apple.CoreSimulator.CoreSimulatorService, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 2380, Parent PID: 1, Name: SimLaunchHost.arm64, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 2416, Parent PID: 1, Name: simdiskimaged, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 2671, Parent PID: 1, Name: tipsd, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 2778, Parent PID: 1, Name: SimulatorTrampoline, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 2989, Parent PID: 1, Name: sharedfilelistd, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 2998, Parent PID: 1, Name: Microsoft Update Assistant, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 5889, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 11638, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 12599, Parent PID: 1, Name: CrashReporterSup, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 17915, Parent PID: 1, Name: com.apple.WebKit.GPU, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 19496, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 20707, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,933 - Process with PID: 22345, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 22897, Parent PID: 1, Name: TipsAppWidget-macOSExtension, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 22906, Parent PID: 1, Name: CalendarWidgetExtension, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 23792, Parent PID: 1, Name: com.apple.WebKit.Networking, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 23794, Parent PID: 1, Name: com.apple.WebKit.Networking, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 24912, Parent PID: 1, Name: ViewBridgeAuxiliary, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 24966, Parent PID: 1, Name: RoutePickerViewService, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 24998, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 27127, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 29081, Parent PID: 1, Name: com.apple.audio., Status: running
+2023-10-27 23:38:59,934 - Process with PID: 30674, Parent PID: 1, Name: storeaccountd, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 33224, Parent PID: 1, Name: com.apple.Safari.SandboxBroker, Status: running
+2023-10-27 23:38:59,934 - Process with PID: 36669, Parent PID: 1, Name: com.apple.Ambien, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 40529, Parent PID: 1, Name: cloudd, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 42263, Parent PID: 1, Name: Terminal, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 43587, Parent PID: 1, Name: bash, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 43599, Parent PID: 43587, Name: python3.11, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 43819, Parent PID: 43599, Name: python3.11, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 44233, Parent PID: 1, Name: webinspectord, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 44434, Parent PID: 1, Name: Safari, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 44436, Parent PID: 1, Name: com.apple.WebKit.Networking, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 44458, Parent PID: 1, Name: com.apple.WebKit.GPU, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 45795, Parent PID: 43599, Name: python3.11, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 50062, Parent PID: 1, Name: chrome_crashpad_handler, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 51841, Parent PID: 1, Name: chrome_crashpad_handler, Status: running
+2023-10-27 23:38:59,935 - Process with PID: 55607, Parent PID: 1, Name: AdobeIPCBroker, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 55626, Parent PID: 1, Name: Creative Cloud, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 55634, Parent PID: 55626, Name: Creative Cloud UI Helper (GPU), Status: running
+2023-10-27 23:38:59,936 - Process with PID: 55635, Parent PID: 55626, Name: Adobe Desktop Service, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 55639, Parent PID: 55626, Name: Creative Cloud UI Helper, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 55640, Parent PID: 55626, Name: Creative Cloud UI Helper (Renderer), Status: running
+2023-10-27 23:38:59,936 - Process with PID: 55654, Parent PID: 1, Name: com.adobe.acc.in, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 55770, Parent PID: 1, Name: com.apple.audio., Status: running
+2023-10-27 23:38:59,936 - Process with PID: 56034, Parent PID: 1, Name: relatived, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 56703, Parent PID: 1, Name: coreauthd, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 56919, Parent PID: 1, Name: akd, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 58165, Parent PID: 1, Name: FollowUpUI, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 59475, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,936 - Process with PID: 59514, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 59901, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 61674, Parent PID: 1, Name: installcoordinat, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 61787, Parent PID: 1, Name: warmd, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 62063, Parent PID: 1, Name: ssh-agent, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 63725, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 64214, Parent PID: 1, Name: USBAgent, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 64621, Parent PID: 1, Name: callservicesd, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 71846, Parent PID: 1, Name: ScriptMonitor, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 72176, Parent PID: 1, Name: ShareSheetUI, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 75592, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,937 - Process with PID: 77121, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 77153, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 77773, Parent PID: 1, Name: figma_agent, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 80012, Parent PID: 1, Name: BiomeAgent, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 80307, Parent PID: 1, Name: Microsoft Outlook, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 80313, Parent PID: 1, Name: com.apple.WebKit.Networking, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 81243, Parent PID: 1, Name: ssh-agent, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 81308, Parent PID: 1, Name: ssh-agent, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 82035, Parent PID: 1, Name: TranslationUIService, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 82181, Parent PID: 1, Name: Creative Cloud Content Manager.node, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 82455, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,939 - Process with PID: 83200, Parent PID: 1, Name: MacGPT, Status: running
+2023-10-27 23:38:59,940 - Process with PID: 83202, Parent PID: 1, Name: com.apple.WebKit.Networking, Status: running
+2023-10-27 23:38:59,940 - Process with PID: 83400, Parent PID: 1, Name: Electron, Status: running
+2023-10-27 23:38:59,940 - Process with PID: 83402, Parent PID: 1, Name: chrome_crashpad_handler, Status: running
+2023-10-27 23:38:59,940 - Process with PID: 83403, Parent PID: 83400, Name: Code Helper (GPU), Status: running
+2023-10-27 23:38:59,940 - Process with PID: 83405, Parent PID: 83400, Name: Code Helper, Status: running
+2023-10-27 23:38:59,940 - Process with PID: 83447, Parent PID: 83400, Name: Code Helper (Renderer), Status: running
+2023-10-27 23:38:59,940 - Process with PID: 83449, Parent PID: 83447, Name: Code Helper (Renderer), Status: running
+2023-10-27 23:38:59,940 - Process with PID: 84184, Parent PID: 1, Name: RTProtectionDaem, Status: running
+2023-10-27 23:38:59,940 - Process with PID: 84192, Parent PID: 1, Name: SettingsDaemon, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 84208, Parent PID: 1, Name: FrontendAgent, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 85607, Parent PID: 1, Name: Microsoft Word, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 87215, Parent PID: 1, Name: fbahelperd, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 87410, Parent PID: 1, Name: mdwrite, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 87915, Parent PID: 1, Name: accountsd, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 90624, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 90630, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 90656, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 90695, Parent PID: 1, Name: node, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 90966, Parent PID: 1, Name: PowerChime, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 90968, Parent PID: 1, Name: ospredictiond, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 92258, Parent PID: 1, Name: universalAccessAuthWarn, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 92350, Parent PID: 1, Name: IMAutomaticHistoryDeletionAgent, Status: running
+2023-10-27 23:38:59,941 - Process with PID: 92617, Parent PID: 1, Name: com.apple.hiservices-xpcservice, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 92912, Parent PID: 1, Name: chrome_crashpad_handler, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 93077, Parent PID: 1, Name: taskgated, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 94022, Parent PID: 1, Name: SimStreamProcessorService, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 94028, Parent PID: 1, Name: SimAudioProcessorService, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 94254, Parent PID: 1, Name: distnoted, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 94407, Parent PID: 1, Name: Hidesktop, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 94492, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 94665, Parent PID: 1, Name: UserNotificationCenter, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 94715, Parent PID: 1, Name: Siri, Status: running
+2023-10-27 23:38:59,942 - Process with PID: 94717, Parent PID: 1, Name: Keychain Circle Notification, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 94725, Parent PID: 1, Name: SafariBookmarksSyncAgent, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 94733, Parent PID: 1, Name: CoreLocationAgent, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 94790, Parent PID: 1, Name: assistantd, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 94791, Parent PID: 1, Name: SiriNCService, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 94797, Parent PID: 1, Name: homed, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 94812, Parent PID: 1, Name: ACCFinderSync, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 94822, Parent PID: 1, Name: Core Sync, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 94963, Parent PID: 1, Name: Adobe Crash Processor, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 95326, Parent PID: 1, Name: swcd, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 95336, Parent PID: 1, Name: ScreenTimeAgent, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 95339, Parent PID: 1, Name: gamecontrollerd, Status: running
+2023-10-27 23:38:59,943 - Process with PID: 95340, Parent PID: 1, Name: gamecontrolleragentd, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95341, Parent PID: 1, Name: UniversalControl, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95342, Parent PID: 1, Name: tccd, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95347, Parent PID: 1, Name: knowledge-agent, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95350, Parent PID: 1, Name: mobileassetd, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95353, Parent PID: 1, Name: biomesyncd, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95356, Parent PID: 1, Name: SidecarRelay, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95360, Parent PID: 1, Name: suggestd, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95363, Parent PID: 1, Name: biometrickitd, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95383, Parent PID: 1, Name: coreduetd, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95386, Parent PID: 1, Name: wifip2pd, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95387, Parent PID: 1, Name: donotdisturbd, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95395, Parent PID: 1, Name: TextInputSwitcher, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95409, Parent PID: 1, Name: AppSSOAgent, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95415, Parent PID: 1, Name: AppSSODaemon, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95426, Parent PID: 1, Name: UIKitSystem, Status: running
+2023-10-27 23:38:59,944 - Process with PID: 95430, Parent PID: 1, Name: rtcreportingd, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95431, Parent PID: 1, Name: CAReportingServi, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95441, Parent PID: 1, Name: coreautha, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95484, Parent PID: 1, Name: aned, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95566, Parent PID: 83449, Name: zsh, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95668, Parent PID: 1, Name: photolibraryd, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95669, Parent PID: 1, Name: ScopedBookmarkAgent, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95672, Parent PID: 1, Name: CoreServicesUIAgent, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95726, Parent PID: 1, Name: SoftwareUpdateNotificationManager, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95727, Parent PID: 1, Name: nsattributedstringagent, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95810, Parent PID: 1, Name: trustd, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 95813, Parent PID: 1, Name: trustd, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 96052, Parent PID: 1, Name: IMDPersistenceAgent, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 96060, Parent PID: 1, Name: Family, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 96072, Parent PID: 1, Name: nbagent, Status: running
+2023-10-27 23:38:59,945 - Process with PID: 96165, Parent PID: 1, Name: translationd, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96174, Parent PID: 1, Name: dmd, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96181, Parent PID: 1, Name: Messages, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96182, Parent PID: 1, Name: sociallayerd, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96186, Parent PID: 1, Name: cloudpaird, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96197, Parent PID: 1, Name: ImageIOXPCService, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96202, Parent PID: 1, Name: LinkedNotesUIService, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96204, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96218, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96226, Parent PID: 1, Name: com.apple.appkit.xpc.openAndSavePanelService, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96227, Parent PID: 1, Name: QuickLookUIService, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96231, Parent PID: 1, Name: ACCFinderSync, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96340, Parent PID: 1, Name: storeuid, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96387, Parent PID: 1, Name: StatusKitAgent, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96389, Parent PID: 1, Name: AppleSpell, Status: running
+2023-10-27 23:38:59,946 - Process with PID: 96391, Parent PID: 1, Name: contactsd, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96393, Parent PID: 1, Name: ctkd, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96394, Parent PID: 1, Name: recentsd, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96395, Parent PID: 1, Name: reversetemplated, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96396, Parent PID: 1, Name: secinitd, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96397, Parent PID: 1, Name: pkd, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96398, Parent PID: 1, Name: containermanagerd, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96400, Parent PID: 1, Name: ContextService, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96401, Parent PID: 1, Name: secd, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96408, Parent PID: 1, Name: com.apple.CodeSi, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96409, Parent PID: 1, Name: systemsoundserve, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96412, Parent PID: 1, Name: IDSBlastDoorService, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96426, Parent PID: 1, Name: com.apple.accessibility.mediaaccessibilityd, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96427, Parent PID: 1, Name: AudioComponentRegistrar, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96441, Parent PID: 1, Name: pbs, Status: running
+2023-10-27 23:38:59,947 - Process with PID: 96466, Parent PID: 1, Name: amfid, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96472, Parent PID: 1, Name: backupd, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96474, Parent PID: 1, Name: backupd-helper, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96478, Parent PID: 1, Name: com.apple.cmio.r, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96481, Parent PID: 1, Name: ContextStoreAgent, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96484, Parent PID: 1, Name: tccd, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96485, Parent PID: 1, Name: usermanagerd, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96489, Parent PID: 1, Name: sysmond, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96490, Parent PID: 1, Name: syncdefaultsd, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96491, Parent PID: 1, Name: contentlinkingd, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96492, Parent PID: 1, Name: fmfd, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96493, Parent PID: 1, Name: com.apple.geod, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96503, Parent PID: 1, Name: adid, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96506, Parent PID: 1, Name: nehelper, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96507, Parent PID: 1, Name: neagent, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96508, Parent PID: 1, Name: biomed, Status: running
+2023-10-27 23:38:59,948 - Process with PID: 96521, Parent PID: 1, Name: powerdatad, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96522, Parent PID: 1, Name: transparencyd, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96524, Parent PID: 1, Name: mobileactivation, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96535, Parent PID: 1, Name: BTLEServerAgent, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96544, Parent PID: 1, Name: keyboardservicesd, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96570, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96571, Parent PID: 1, Name: CallHistorySyncHelper, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96598, Parent PID: 1, Name: QuickLookUIService, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96600, Parent PID: 1, Name: triald, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96602, Parent PID: 1, Name: networkserviceproxy, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96605, Parent PID: 1, Name: amsaccountsd, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96625, Parent PID: 1, Name: softwareupdated, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96626, Parent PID: 1, Name: suhelperd, Status: running
+2023-10-27 23:38:59,949 - Process with PID: 96627, Parent PID: 1, Name: QuickLookUIService, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 96642, Parent PID: 1, Name: routined, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 96645, Parent PID: 1, Name: logd_helper, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 96718, Parent PID: 1, Name: remindd, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 96742, Parent PID: 1, Name: fileproviderd, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 96752, Parent PID: 1, Name: siriactionsd, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 96815, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 96835, Parent PID: 1, Name: com.apple.WebKit.WebContent, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 96845, Parent PID: 1, Name: PlugInLibraryService, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 97026, Parent PID: 83400, Name: Code Helper (Renderer), Status: running
+2023-10-27 23:38:59,950 - Process with PID: 97027, Parent PID: 83400, Name: Code Helper, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 97028, Parent PID: 83447, Name: Code Helper (Renderer), Status: running
+2023-10-27 23:38:59,950 - Process with PID: 97070, Parent PID: 97027, Name: Code Helper, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 97099, Parent PID: 97027, Name: Code Helper, Status: running
+2023-10-27 23:38:59,950 - Process with PID: 97133, Parent PID: 1, Name: com.apple.quicklook.ThumbnailsAgent, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97167, Parent PID: 1, Name: DiskUnmountWatcher, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97173, Parent PID: 1, Name: online-authd, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97197, Parent PID: 1, Name: followupd, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97205, Parent PID: 1, Name: countryd, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97238, Parent PID: 97027, Name: Python, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97247, Parent PID: 97238, Name: Python, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97255, Parent PID: 97027, Name: Code Helper, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97267, Parent PID: 1, Name: spindump, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97274, Parent PID: 1, Name: extensionkitservice, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97275, Parent PID: 1, Name: ScreenTimeWidgetExtension, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97583, Parent PID: 1, Name: WeatherWidget, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97587, Parent PID: 1, Name: netbiosd, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97588, Parent PID: 1, Name: bluetoothuserd, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97589, Parent PID: 1, Name: findmydeviced, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97591, Parent PID: 1, Name: calaccessd, Status: running
+2023-10-27 23:38:59,951 - Process with PID: 97596, Parent PID: 1, Name: TrustedPeersHelper, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97601, Parent PID: 1, Name: CMFSyncAgent, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97602, Parent PID: 1, Name: MessagesBlastDoorService, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97603, Parent PID: 1, Name: smd, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97604, Parent PID: 1, Name: AssetCacheLocatorService, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97615, Parent PID: 1, Name: siriknowledged, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97616, Parent PID: 1, Name: appstoreagent, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97620, Parent PID: 1, Name: XProtectBehavior, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97624, Parent PID: 1, Name: osanalyticshelpe, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97625, Parent PID: 1, Name: proactiveeventtrackerd, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97630, Parent PID: 1, Name: IMTranscoderAgent, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97631, Parent PID: 1, Name: MessagesBlastDoorService, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97634, Parent PID: 1, Name: CallHistoryPluginHelper, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97638, Parent PID: 1, Name: accessoryd, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97662, Parent PID: 1, Name: mapspushd, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97691, Parent PID: 1, Name: mbuseragent, Status: running
+2023-10-27 23:38:59,952 - Process with PID: 97708, Parent PID: 1, Name: ContainerMetadataExtractor, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 97752, Parent PID: 1, Name: PowerUIAgent, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 97756, Parent PID: 1, Name: com.apple.Safari.SafeBrowsing.Service, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 97781, Parent PID: 1, Name: nsattributedstri, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 97791, Parent PID: 1, Name: itunescloudd, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 97793, Parent PID: 1, Name: dataaccessd, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 97794, Parent PID: 1, Name: parsecd, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 97809, Parent PID: 1, Name: VTDecoderXPCService, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 97925, Parent PID: 1, Name: naturallanguaged, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 98024, Parent PID: 1, Name: ReportCrash, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 98055, Parent PID: 1, Name: OSDUIHelper, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 98205, Parent PID: 1, Name: misagent, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 98406, Parent PID: 1, Name: QuickLookSatellite, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 98414, Parent PID: 1, Name: spindump_agent, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 98416, Parent PID: 1, Name: iconservicesagent, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 98417, Parent PID: 1, Name: iconservicesd, Status: running
+2023-10-27 23:38:59,953 - Process with PID: 98419, Parent PID: 1, Name: csnameddatad, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98421, Parent PID: 1, Name: iCloudNotificationAgent, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98612, Parent PID: 1, Name: AssetCacheLocato, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98613, Parent PID: 1, Name: com.apple.Stream, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98677, Parent PID: 1, Name: MTLCompilerService, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98682, Parent PID: 1, Name: XprotectService, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98684, Parent PID: 1, Name: replayd, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98688, Parent PID: 1, Name: trustd, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98689, Parent PID: 1, Name: trustdFileHelper, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98690, Parent PID: 1, Name: containermanager, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98694, Parent PID: 1, Name: MTLAssetUpgraderD, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98695, Parent PID: 1, Name: linkd, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98697, Parent PID: 1, Name: mobiletimerd, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98704, Parent PID: 1, Name: axassetsd, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98705, Parent PID: 1, Name: com.apple.audio.ComponentTagHelper, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 98916, Parent PID: 1, Name: findmydevice-user-agent, Status: running
+2023-10-27 23:38:59,954 - Process with PID: 99411, Parent PID: 83449, Name: zsh, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99695, Parent PID: 1, Name: intents_helper, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99748, Parent PID: 1, Name: DockHelper, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99764, Parent PID: 1, Name: devicecheckd, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99765, Parent PID: 1, Name: com.apple.Accoun, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99766, Parent PID: 1, Name: cdpd, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99770, Parent PID: 1, Name: progressd, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99771, Parent PID: 1, Name: sandboxd, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99772, Parent PID: 1, Name: cfprefsd, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99774, Parent PID: 1, Name: AppleCredentialM, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99775, Parent PID: 1, Name: nfcd, Status: running
+2023-10-27 23:38:59,955 - Process with PID: 99823, Parent PID: 1, Name: PasswordBreachAgent, Status: running
+2023-10-27 23:39:10,417 - Message sent: Hello, this is an IPC message
+2023-10-27 23:39:12,271 - Received message: Hello, this is an IPC message
+2023-10-27 23:39:15,024 - Produced Item-0. Buffer: ['Item-0']
+2023-10-27 23:39:15,024 - Produced Item-0. Buffer: ['Item-0', 'Item-0']
+2023-10-27 23:39:15,024 - Consumed Item-0. Buffer: ['Item-0']
+2023-10-27 23:39:15,024 - Consumed Item-0. Buffer: []
+2023-10-27 23:39:15,432 - Produced Item-1. Buffer: ['Item-1']
+2023-10-27 23:39:15,433 - Consumed Item-1. Buffer: []
+2023-10-27 23:39:15,477 - Produced Item-1. Buffer: ['Item-1']
+2023-10-27 23:39:15,477 - Consumed Item-1. Buffer: []
+2023-10-27 23:39:15,686 - Produced Item-2. Buffer: ['Item-2']
+2023-10-27 23:39:15,686 - Consumed Item-2. Buffer: []
+2023-10-27 23:39:15,722 - Produced Item-2. Buffer: ['Item-2']
+2023-10-27 23:39:15,746 - Consumed Item-2. Buffer: []
+2023-10-27 23:39:15,925 - Produced Item-3. Buffer: ['Item-3']
+2023-10-27 23:39:15,926 - Consumed Item-3. Buffer: []
+2023-10-27 23:39:16,033 - Produced Item-3. Buffer: ['Item-3']
+2023-10-27 23:39:16,037 - Consumed Item-3. Buffer: []
+2023-10-27 23:39:16,159 - Produced Item-4. Buffer: ['Item-4']
+2023-10-27 23:39:16,159 - Consumed Item-4. Buffer: []
+2023-10-27 23:39:16,508 - Produced Item-4. Buffer: ['Item-4']
+2023-10-27 23:39:16,508 - Consumed Item-4. Buffer: []
+2023-10-27 23:39:16,650 - Produced Item-5. Buffer: ['Item-5']
+2023-10-27 23:39:16,650 - Consumed Item-5. Buffer: []
+2023-10-27 23:39:16,983 - Produced Item-5. Buffer: ['Item-5']
+2023-10-27 23:39:16,983 - Consumed Item-5. Buffer: []
+2023-10-27 23:39:17,072 - Produced Item-6. Buffer: ['Item-6']
+2023-10-27 23:39:17,072 - Consumed Item-6. Buffer: []
+2023-10-27 23:39:17,113 - Produced Item-6. Buffer: ['Item-6']
+2023-10-27 23:39:17,375 - Consumed Item-6. Buffer: []
+2023-10-27 23:39:17,470 - Produced Item-7. Buffer: ['Item-7']
+2023-10-27 23:39:17,470 - Consumed Item-7. Buffer: []
+2023-10-27 23:39:17,559 - Produced Item-7. Buffer: ['Item-7']
+2023-10-27 23:39:17,559 - Consumed Item-7. Buffer: []
+2023-10-27 23:39:17,749 - Produced Item-8. Buffer: ['Item-8']
+2023-10-27 23:39:17,810 - Produced Item-8. Buffer: ['Item-8', 'Item-8']
+2023-10-27 23:39:17,845 - Consumed Item-8. Buffer: ['Item-8']
+2023-10-27 23:39:17,922 - Consumed Item-8. Buffer: []
+2023-10-27 23:39:18,008 - Produced Item-9. Buffer: ['Item-9']
+2023-10-27 23:39:18,128 - Produced Item-9. Buffer: ['Item-9', 'Item-9']
+2023-10-27 23:39:18,194 - Consumed Item-9. Buffer: ['Item-9']
+2023-10-27 23:39:18,260 - Consumed Item-9. Buffer: []

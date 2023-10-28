@@ -10,29 +10,46 @@ import threading
 from multiprocessing import Lock
 import time
 
+# Set up logging to create a log file
 logging.basicConfig(filename='Advanced_Process_Manager.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
+# Create a logger for the process manager
 process_log = logging.getLogger('Advanced_Process_Manager')
 process_log.setLevel(logging.INFO)
 
+# Dictionary to keep track of running processes
 running_processes = {}
+
+# Dictionary to store threads for each process
 process_threads = {}
+
+# List to store information about threads
 threads = []
+
+# Multiprocessing Pipe for inter-process communication
 pipe_conn, child_conn = multiprocessing.Pipe()
+
+# Queue for shared data
 shared_queue = Queue()
+
+# Lock for process synchronization
 mutex = multiprocessing.Lock()
-process_threads = {}
+
+# Shared Lock
 shared_lock = Lock()
+
+# Size of the shared buffer
 BUFFER_SIZE = 5
 
-# Shared buffer
+# Shared buffer for producer-consumer example
 buffer = []
 
-# Semaphores
+# Semaphores for producer-consumer example
 mutex = threading.Semaphore(1)  # Mutex for buffer access
 empty = threading.Semaphore(BUFFER_SIZE)  # Semaphore for empty slots
 filled = threading.Semaphore(0)  # Semaphore for filled slots
 
+# Load the appropriate C library based on the platform
 if sys.platform.startswith('win'):
     libc = ctypes.CDLL('msvcrt')
 elif sys.platform.startswith('linux'):
@@ -42,6 +59,7 @@ elif sys.platform == 'darwin':
 else:
     raise OSError("Unsupported platform")
 
+# Function to run within child processes
 def process_function(process_name):
     try:
         process_log.info(f"Child process '{process_name}' with PID {os.getpid()} running")
@@ -67,22 +85,24 @@ def process_function(process_name):
     except Exception as e:
         process_log.error(f"Error in process_function: {str(e)}")
 
+# Function to create a new process
 def create_process(process_name):
     try:
         pid = os.fork()
-        if pid == 0:
+        if pid == 0:  # This code runs in the child process
             try:
                 os.execlp(process_name, process_name)
             except Exception as e:
                 process_log.error(f"Child process '{process_name}' with PID {os.getpid()} encountered an error: {str(e)}")
             os._exit(1)
-        else:
+        else:  # This code runs in the parent process
             running_processes[pid] = process_name
             process_log.info(f"Child process '{process_name}' with PID {pid} created.")
             process_function(process_name)
     except Exception as e:
         process_log.error(f"Error in create_process: {str(e)}")
 
+# Function to list running processes
 def list_processes():
     try:
         while True:
@@ -122,10 +142,10 @@ def list_processes():
     except Exception as e:
         process_log.error(f"Error in list_processes: {str(e)}")
 
-
 # Create an event to signal thread exit
 thread_exit_signal = threading.Event()
 
+# Function to create a new thread
 def create_thread(thread_name):
     try:
         process_pid = os.getpid()
@@ -145,6 +165,7 @@ def create_thread(thread_name):
     except Exception as e:
         process_log.error(f"Error in create_thread: {str(e)}")
 
+# Function to terminate a thread
 def terminate_thread(thread_name):
     try:
         global threads, thread_exit_signal
@@ -169,7 +190,7 @@ def terminate_thread(thread_name):
     except Exception as e:
         process_log.error(f"Error in terminate_thread: {str(e)}")
 
-
+# Function to list threads within the current process
 def list_threads():
     process_pid = os.getpid()
     threads = process_threads.get(process_pid, [])
@@ -181,8 +202,10 @@ def list_threads():
         for thread_id, thread_name in threads:
             print(f"Thread ID: {thread_id}, Name: {thread_name}")
 
+# Create pipes for inter-process communication (IPC)
 read_pipe, write_pipe = os.pipe()
 
+# Function to send an IPC message
 def ipc_send_message(message):
     try:
         os.write(write_pipe, message.encode())
@@ -190,6 +213,7 @@ def ipc_send_message(message):
     except Exception as e:
         process_log.error(f"Error in ipc_send_message: {str(e)}")
 
+# Function to receive an IPC message
 def ipc_receive_message():
     try:
         # Check if there is any data available to read from the pipe
@@ -204,8 +228,7 @@ def ipc_receive_message():
     except Exception as e:
         process_log.error(f"Error in ipc_receive_message: {str(e)}")
 
-
-# Producer function
+# Producer function for the producer-consumer example
 def producer(*args):
     for i in range(10):
         item = f"Item-{i}"  # You can generate your items here
@@ -218,7 +241,7 @@ def producer(*args):
         filled.release()  # Notify that a slot is filled
         time.sleep(random.uniform(0.1, 0.5))  # Simulate work
 
-# Consumer function
+# Consumer function for the producer-consumer example
 def consumer(*args):
     for i in range(10):
         filled.acquire()  # Wait for a filled slot
@@ -230,7 +253,7 @@ def consumer(*args):
         empty.release()  # Notify that a slot is empty
         time.sleep(random.uniform(0.1, 0.5))  # Simulate work
 
-
+# Function for process synchronization (producer-consumer example)
 def process_synchronization():
     producers = [threading.Thread(target=producer) for _ in range(2)]
     consumers = [threading.Thread(target=consumer) for _ in range(2)]
@@ -247,6 +270,7 @@ def process_synchronization():
     for consumer_thread in consumers:
         consumer_thread.join()
 
+# Function to clear the log file
 def clear_log_file():
     try:
         with open('Advanced_Process_Manager.log', 'w'):
@@ -255,6 +279,7 @@ def clear_log_file():
     except Exception as e:
         logging.error(f"Error in clear_log_file: {str(e)}")
 
+# Main entry point of the program
 if __name__ == "__main__":
     while True:
         print("\nOptions:")
