@@ -11,7 +11,8 @@ from multiprocessing import Lock
 import time
 
 # Set up logging to create a log file
-logging.basicConfig(filename='Advanced_Process_Manager.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(filename='Advanced_Process_Manager.log',
+                    level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # Create a logger for the process manager
 process_log = logging.getLogger('Advanced_Process_Manager')
@@ -62,7 +63,8 @@ else:
 # Function to run within child processes
 def process_function(process_name):
     try:
-        process_log.info(f"Child process '{process_name}' with PID {os.getpid()} running")
+        process_log.info(
+            f"Child process '{process_name}' with PID {os.getpid()} running")
         process_threads[os.getpid()] = []
 
         while True:
@@ -93,11 +95,13 @@ def create_process(process_name):
             try:
                 os.execlp(process_name, process_name)
             except Exception as e:
-                process_log.error(f"Child process '{process_name}' with PID {os.getpid()} encountered an error: {str(e)}")
+                process_log.error(
+                    f"Child process '{process_name}' with PID {os.getpid()} encountered an error: {str(e)}")
             os._exit(1)
         else:  # This code runs in the parent process
             running_processes[pid] = process_name
-            process_log.info(f"Child process '{process_name}' with PID {pid} created.")
+            process_log.info(
+                f"Child process '{process_name}' with PID {pid} created.")
             process_function(process_name)
     except Exception as e:
         process_log.error(f"Error in create_process: {str(e)}")
@@ -113,18 +117,23 @@ def list_processes():
             choice = input("Select an option: ")
 
             if choice == "1":
+                # Display a list of processes created through your code
                 process_log.info("Processes created through your code:")
                 if not running_processes:
                     print("No processes were created through your code.")
-                    process_log.info("No processes were created through your code.")
+                    process_log.info(
+                        "No processes were created through your code.")
                 else:
                     for pid, process_name in running_processes.items():
                         process_info = psutil.Process(pid)
                         parent_pid = process_info.ppid()
                         state = process_info.status()
-                        process_log.info(f"Process with PID: {pid}, Name: {process_name}, Parent PID: {parent_pid}, State: {state}")
-                        print(f"Process with PID: {pid}, Name: {process_name}, Parent PID: {parent_pid}, State: {state}")
+                        process_log.info(
+                            f"Process with PID: {pid}, Name: {process_name}, Parent PID: {parent_pid}, State: {state}")
+                        print(
+                            f"Process with PID: {pid}, Name: {process_name}, Parent PID: {parent_pid}, State: {state}")
             elif choice == "2":
+                # Display a list of all processes on the computer
                 process_log.info("All processes on the computer:")
                 for process in psutil.process_iter(attrs=['pid', 'ppid', 'name', 'status']):
                     process_info = process.info
@@ -132,15 +141,21 @@ def list_processes():
                     ppid = process_info['ppid']
                     name = process_info['name']
                     status = process_info['status']
-                    process_log.info(f"Process with PID: {pid}, Parent PID: {ppid}, Name: {name}, Status: {status}")
-                    print(f"Process with PID: {pid}, Parent PID: {ppid}, Name: {name}, Status: {status}")
+                    process_log.info(
+                        f"Process with PID: {pid}, Parent PID: {ppid}, Name: {name}, Status: {status}")
+                    print(
+                        f"Process with PID: {pid}, Parent PID: {ppid}, Name: {name}, Status: {status}")
             elif choice == "3":
+                # Return to the main menu
                 print("Returning to the main menu.")
                 break
             else:
+                # Handle invalid menu options
                 print("Invalid option. Try again.")
     except Exception as e:
+        # Log an error if an exception occurs
         process_log.error(f"Error in list_processes: {str(e)}")
+
 
 # Create an event to signal thread exit
 thread_exit_signal = threading.Event()
@@ -148,22 +163,36 @@ thread_exit_signal = threading.Event()
 # Function to create a new thread
 def create_thread(thread_name):
     try:
+        # Get the process ID of the current process
         process_pid = os.getpid()
+
+        # Create a variable to store the thread ID
         thread_id = ctypes.c_long()
 
+        # Define the function to be executed by the thread
         def thread_func():
+            # Log that the thread is running
             process_log.info(f"Thread '{thread_name}' running")
 
+        # Create a pointer to the thread function
         thread_func_ptr = ctypes.CFUNCTYPE(None)(thread_func)
 
+        # Attempt to create a new thread
         if libc.pthread_create(ctypes.byref(thread_id), None, thread_func_ptr, None) == 0:
+            # If the thread is created successfully, add it to the list of threads
             threads.append((thread_id, thread_name))
-            process_threads.setdefault(process_pid, []).append((thread_id, thread_name))
+            # Store the thread in the dictionary of process threads
+            process_threads.setdefault(process_pid, []).append(
+                (thread_id, thread_name))
+            # Log that the thread was created successfully
             process_log.info(f"Thread '{thread_name}' created successfully")
         else:
+            # Log an error if the thread creation fails
             process_log.error("Failed to create thread")
     except Exception as e:
+        # Log an error if an exception occurs during thread creation
         process_log.error(f"Error in create_thread: {str(e)}")
+
 
 # Function to terminate a thread
 def terminate_thread(thread_name):
@@ -185,8 +214,9 @@ def terminate_thread(thread_name):
         if not thread_terminated:
             print(f"Thread '{thread_name}' not found.")
             process_log.error(f"Thread '{thread_name}' not found.")
-            
-        threads = [(t, n) for t, n in threads if (t, n) not in threads_to_remove]
+
+        threads = [(t, n)
+                   for t, n in threads if (t, n) not in threads_to_remove]
     except Exception as e:
         process_log.error(f"Error in terminate_thread: {str(e)}")
 
@@ -201,6 +231,7 @@ def list_threads():
         print("Threads in this process:")
         for thread_id, thread_name in threads:
             print(f"Thread ID: {thread_id}, Name: {thread_name}")
+
 
 # Create pipes for inter-process communication (IPC)
 read_pipe, write_pipe = os.pipe()
@@ -278,6 +309,7 @@ def clear_log_file():
         print('\nLog file cleared.')
     except Exception as e:
         logging.error(f"Error in clear_log_file: {str(e)}")
+
 
 # Main entry point of the program
 if __name__ == "__main__":
