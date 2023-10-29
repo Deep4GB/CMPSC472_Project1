@@ -237,15 +237,15 @@ def list_threads():
 read_pipe, write_pipe = os.pipe()
 
 # Function to send an IPC message
-def ipc_send_message(message):
+def ipc_send(message):
     try:
         os.write(write_pipe, message.encode())
         process_log.info(f"Message sent: {message}")
     except Exception as e:
-        process_log.error(f"Error in ipc_send_message: {str(e)}")
+        process_log.error(f"Error in ipc_send: {str(e)}")
 
 # Function to receive an IPC message
-def ipc_receive_message():
+def ipc_receive():
     try:
         # Check if there is any data available to read from the pipe
         if os.fstat(read_pipe).st_size > 0:
@@ -257,9 +257,10 @@ def ipc_receive_message():
             print("No message available")
             process_log.warning("No message available")
     except Exception as e:
-        process_log.error(f"Error in ipc_receive_message: {str(e)}")
+        process_log.error(f"Error in ipc_receive: {str(e)}")
 
-# Producer function for the producer-consumer example
+# Similar to Homework 6
+# Producer function for the producer-consumer example 
 def producer(*args):
     for i in range(10):
         item = f"Item-{i}"  # You can generate your items here
@@ -302,52 +303,44 @@ def process_synchronization():
         consumer_thread.join()
 
 # Function to clear the log file
-def clear_log_file():
+def Clear_Log():
     try:
         with open('Advanced_Process_Manager.log', 'w'):
             pass
         print('\nLog file cleared.')
     except Exception as e:
-        logging.error(f"Error in clear_log_file: {str(e)}")
+        logging.error(f"Error in Clear_Log: {str(e)}")
 
 
 # Main entry point of the program
 if __name__ == "__main__":
+    options = {
+        "1": lambda: create_process(input("Enter the process name: ")),
+        "2": lambda: create_thread(input("Enter a name for the thread: ")),
+        "3": lambda: terminate_thread(input("Enter thread name to terminate: ")),
+        "4": list_processes,
+        "5": lambda: ipc_send(input("Enter message to send: ")),
+        "6": ipc_receive,
+        "7": process_synchronization,
+        "8": Clear_Log,
+        "9": lambda: (print("Exited successfully"), exit(0))
+    }
+
     while True:
         print("\nOptions:")
-        print("1. Create a process")
-        print("2. Create a thread")
-        print("3. Terminate a thread")
-        print("4. Monitor all running processes on your device.")
-        print("5. Send IPC message")
-        print("6. Receive IPC message")
+        print("1. Create A Process")
+        print("2. Create A Thread")
+        print("3. Terminate A Thread")
+        print("4. Monitor Running Processes")
+        print("5. Send IPC Message")
+        print("6. Receive IPC Message")
         print("7. Process Synchronization")
-        print("8. Clear log file")
+        print("8. Clear Log File")
         print("9. Exit")
         choice = input("Select an option: ")
 
-        if choice == "1":
-            process_name = input("Enter the process name: ")
-            create_process(process_name)
-        elif choice == "2":
-            thread_name = input("Enter a name for the thread: ")
-            create_thread(thread_name)
-        elif choice == "3":
-            thread_name = input("Enter thread name to terminate: ")
-            terminate_thread(thread_name)
-        elif choice == "4":
-            list_processes()
-        elif choice == "5":
-            message = input("Enter message to send: ")
-            ipc_send_message(message)
-        elif choice == "6":
-            received_message = ipc_receive_message()
-        elif choice == "7":
-            process_synchronization()
-        elif choice == "8":
-            clear_log_file()
-        elif choice == "9":
-            print("Exited successfully")
-            exit(0)
+        function = options.get(choice)
+        if function:
+            function()
         else:
             print("Invalid option. Try again.")
