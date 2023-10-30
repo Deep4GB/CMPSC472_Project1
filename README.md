@@ -24,9 +24,19 @@
 # 
 ## Installation
 
-- To use this advanced process manager, simply import the necessary libraries and run the `main.py` file.
+To set up and run the Advanced Process Manager on your local machine, follow these steps:
 
-- The tool generates a process manager log file that contains comprehensive logs of the program's activities, helping you monitor the execution and diagnose issues effectively.
+1. **Clone the Repository**: Use the following Git command to clone the repository to your local machine:
+   ```shell
+   gh repo clone Deep4GB/CMPSC472_Project1
+
+2. Install Dependencies: Install the required dependencies using the following command:
+    ```shell
+    pip install psutil
+
+3. Run the Process Manager: Execute the following command to run the Process Manager:
+    ```
+    python3 main.py
 
 # 
 ## Function Explanations / Design
@@ -95,15 +105,17 @@
 The advanced process manager, enhanced with synchronization mechanisms, offers an efficient solution for the management and monitoring of processes and threads. It plays a crucial role in ensuring synchronization to prevent data corruption and conflicts over shared resources. This tool serves as an invaluable resource for comprehending and implementing synchronization mechanisms, particularly in scenarios involving common challenges like producer-consumer and reader-writer problems.
 
 # 
-### CLI Demonstration
+## CLI Demonstration
 
-<div style="text-align:center">
-    <img src="Results/R1.png" alt="Alt Text" />
-    <img src="Results/R2.png" alt="Alt Text" />
-    <img src="Results/R3.png" alt="Alt Text" />
-    <img src="Results/R4.png" alt="Alt Text" />
-    <img src="Results/R5.png" alt="Alt Text" />
-</div>
+#### The following images provide a visual representation of the Command-Line Interface (CLI) in action, showcasing each option's functionality and appearance. While the CLI output offers concise information for better readability, a comprehensive log of these actions is recorded in the "Advanced_Process_Manager.log" file, allowing for more detailed examination of the commands and their outcomes.
+
+![Alt Text](Results/R1.png)
+![Alt Text](Results/R2.png)
+![Alt Text](Results/R3.png)
+![Alt Text](Results/R4.png)
+![Alt Text](Results/R5.png)
+
+#### These images and the corresponding log file together offer insights into how the CLI commands are executed and provide detailed records of the program's activities for reference and analysis.
 
 #
 ## Discussion & Conclusion
